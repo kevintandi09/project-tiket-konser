@@ -1,6 +1,7 @@
 loadComponent("navbar", "/components/navbar.html");
 loadComponent("footer", "/components/footer.html");
-
+loadComponent("hero", "/components/hero.html");
+loadComponent("trending", "/components/trending.html");
 
 
 function loadComponent(id, file) {
