@@ -1,17 +1,31 @@
-loadComponent("navbar", "/components/navbar.html");
-loadComponent("footer", "/components/footer.html");
-loadComponent("hero", "/components/hero.html");
-loadComponent("trending", "/components/trending.html");
+import { initNavbar } from "./navbar.js";
+import { initHero } from "./hero.js";
+import { initTrending } from "./trending.js";
+import { initFooter } from "./footer.js";
 
+const components = [
+    ["navbar", "/components/navbar.html", initNavbar],
+    ["hero", "/components/hero.html", initHero],
+    ["trending", "/components/trending.html", initTrending],
+    ["footer", "/components/footer.html", initFooter]
+];
 
-function loadComponent(id, file) {
+async function loadComponents(id, file, initFunction) {
+    const element = document.getElementById(id);
+    const response = await fetch(file);
 
-    fetch(file)
-        .then(response => response.text())
-        .then(data => {
+    if(!response.ok) {
+        console.error(`Failed to load ${file}: ${response.statusText}`);
+        return;
+    }
 
-            document.getElementById(id).innerHTML = data;
+    element.innerHTML = await response.text();
 
-        });
+    if(initFunction) {
+        initFunction(element);
+    };
+} 
 
-}
+components.forEach(([id, file, initFunction]) => {
+    loadComponents(id, file, initFunction);
+});
