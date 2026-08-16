@@ -10,7 +10,7 @@ const konserDatas =[
     Category: "Svara Festival ",
     Title: "Bazaar Music Festival",
     Date: "19 Juli - 20 Juli 2026",
-    Location: "Bandung, Indonesia",
+    Location: "Stadiun basket ball GBK, Jakarta",
     image: "https://cdns.klimg.com/resized/1200x600/p/headline/svara-fest-2025-siap-digelar-ada-maliq--a54883.jpg"
   }, 
   {
