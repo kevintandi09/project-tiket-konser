@@ -6,7 +6,7 @@ export function initHero(element) {
   const eventTitle = document.getElementById("event-title");
   const eventDate = document.getElementById("date");
   const eventLocation = document.getElementById("location");
-  const konserData = konserDatas[0]; 
+  const konserData = konserDatas[1]; 
 
   hero.style.backgroundImage = `url('${konserData.image}')`;
   hero.style.backgroundRepeat = "no-repeat";

@@ -13,6 +13,7 @@ const konserDatas =[
     date: "19 Juli - 20 Juli 2026",
     location: "Stadiun basketball GBK, Jakarta",
     image: "https://image.idntimes.com/post/20250722/upload_f3ac02f4e72e5a0838aea48668695eaa_e1e3a920-2cad-4c4d-b617-8386702c9999.jpeg",
+    textColor: '#7DF4FF'
   }, 
   {
     category: "Melophile Festival",
